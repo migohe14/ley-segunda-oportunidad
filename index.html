@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segunda Oportunidad: Análisis Jurisprudencial 2024–2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --ink: #0f1117;
+    --page: #f5f3ef;
+    --rule: #d4cfc6;
+    --accent: #c4390a;
+    --accent-pale: #f9ece7;
+    --eu-blue: #1a3a8f;
+    --eu-pale: #e8edf9;
+    --gold: #b8860b;
+    --gold-pale: #fdf6e3;
+    --green: #1a6b3c;
+    --green-pale: #e6f3ec;
+    --gray: #6b6560;
+    --light-gray: #e8e5e0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--page);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0 2rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .nav-brand {
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    font-size: 0.85rem;
+    padding: 0.75rem 1.5rem 0.75rem 0;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    margin-right: 1rem;
+    letter-spacing: 0.01em;
+  }
+  .nav-tabs {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-tab {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.75rem 1.1rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.15s;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .nav-tab:hover { color: rgba(255,255,255,0.85); }
+  .nav-tab.active { color: white; border-bottom-color: var(--accent); }
+
+  /* MAIN CONTENT */
+  main { max-width: 1080px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* TYPOGRAPHY */
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+  }
+  p { color: #3a3530; line-height: 1.7; }
+
+  /* HERO */
+  .hero {
+    padding: 3rem 0 2.5rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .hero h1 { margin-bottom: 1rem; }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--gray);
+    max-width: 620px;
+    font-weight: 300;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .hero-stat-n {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .hero-stat-l { font-size: 0.72rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* CARDS GRID */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 2rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .cell { background: var(--page); padding: 1.5rem; }
+  .cell:hover { background: white; }
+
+  /* SECTION DIVIDER */
+  .section-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  /* JUDGMENT CARDS */
+  .judgment {
+    border: 1px solid var(--rule);
+    background: white;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+  }
+  .judgment:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+  .judgment-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+  }
+  .judgment-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .badge-tjue { background: var(--eu-pale); color: var(--eu-blue); }
+  .badge-ts { background: var(--accent-pale); color: var(--accent); }
+  .badge-ap { background: var(--gold-pale); color: var(--gold); }
+  .badge-inst { background: var(--green-pale); color: var(--green); }
+
+  .judgment-title { font-weight: 500; font-size: 0.9rem; flex: 1; }
+  .judgment-date { font-size: 0.72rem; color: var(--gray); white-space: nowrap; flex-shrink: 0; }
+  .judgment-body {
+    display: none;
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px solid var(--light-gray);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+  }
+  .judgment-body.open { display: block; }
+  .judgment-body p { font-size: 0.88rem; margin-bottom: 0.75rem; }
+  .judgment-body ul { padding-left: 1.25rem; }
+  .judgment-body li { font-size: 0.88rem; color: #3a3530; margin-bottom: 0.4rem; }
+
+  /* DOCTRINE TABLE */
+  .doctrine-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 0.85rem; }
+  .doctrine-table th {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    padding: 0.6rem 1rem;
+    background: var(--light-gray);
+    border-bottom: 2px solid var(--rule);
+  }
+  .doctrine-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .doctrine-table tr:last-child td { border-bottom: none; }
+  .doctrine-table tr:hover td { background: rgba(255,255,255,0.7); }
+
+  /* STATUS PILLS */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+  }
+  .pill-red { background: #fde8e4; color: #9b2014; }
+  .pill-yellow { background: #fef6de; color: #8a6a00; }
+  .pill-green { background: var(--green-pale); color: var(--green); }
+  .pill-blue { background: var(--eu-pale); color: var(--eu-blue); }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.45rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: var(--rule);
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -1.6rem;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--page);
+  }
+  .tl-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray);
+    margin-bottom: 0.25rem;
+  }
+  .tl-title { font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; }
+  .tl-body { font-size: 0.83rem; color: var(--gray); }
+
+  /* CALC WIDGET */
+  .calc-card {
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .calc-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.25rem 0; }
+  .calc-field label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    margin-bottom: 0.4rem;
+  }
+  .calc-field input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--rule);
+    background: var(--page);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .calc-field input:focus { border-color: var(--accent); background: white; }
+  .calc-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.65rem 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.15s;
+  }
+  .calc-btn:hover { background: #a02e07; }
+  .calc-result {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    background: var(--page);
+    border-left: 3px solid var(--accent);
+    display: none;
+  }
+  .calc-result.show { display: block; }
+  .result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.85rem;
+  }
+  .result-row:last-child { border-bottom: none; }
+  .result-label { color: var(--gray); }
+  .result-value { font-family: 'DM Mono', monospace; font-weight: 500; }
+  .result-value.exonerated { color: var(--green); }
+  .result-value.remaining { color: var(--accent); }
+  .result-total {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 2px solid var(--ink);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  /* CONSTITUTIONAL MAP */
+  .const-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 2rem; }
+  .const-card {
+    padding: 1.25rem;
+    border: 1px solid var(--rule);
+    position: relative;
+    background: white;
+  }
+  .const-art {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+  .const-name { font-size: 0.82rem; font-weight: 500; margin-bottom: 0.75rem; }
+  .const-desc { font-size: 0.78rem; color: var(--gray); line-height: 1.5; margin-bottom: 0.75rem; }
+  .const-via { font-size: 0.72rem; font-weight: 500; }
+
+  /* CONFLICT GAUGE */
+  .conflict-section { margin-bottom: 2.5rem; }
+  .conflict-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .conflict-q { flex: 1; font-size: 0.85rem; }
+  .conflict-bars { display: flex; gap: 0.5rem; flex-shrink: 0; }
+  .c-bar {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0 0.6rem;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+  .c-es { background: var(--accent-pale); color: var(--accent); border: 1px solid #e8c0b4; }
+  .c-eu { background: var(--eu-pale); color: var(--eu-blue); border: 1px solid #b8c8e8; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .calc-inputs { grid-template-columns: 1fr; }
+    .conflict-bars { flex-direction: column; gap: 0.25rem; }
+    .hero-meta { gap: 1.5rem; }
+    nav { padding: 0 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Segunda Oportunidad</div>
+  <div class="nav-tabs">
+    <div class="nav-tab active" onclick="showPanel('resumen')">Resumen</div>
+    <div class="nav-tab" onclick="showPanel('jurisprudencia')">Jurisprudencia</div>
+    <div class="nav-tab" onclick="showPanel('doctrina')">Doctrina TS 2026</div>
+    <div class="nav-tab" onclick="showPanel('calculadora')">Calculadora</div>
+    <div class="nav-tab" onclick="showPanel('conflicto')">ES vs. UE</div>
+    <div class="nav-tab" onclick="showPanel('constitucional')">Vía Constitucional</div>
+    <div class="nav-tab" onclick="showPanel('cronologia')">Cronología</div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===================== RESUMEN ===================== -->
+<div id="panel-resumen" class="panel active">
+  <div class="hero">
+    <div class="hero-eyebrow">Análisis jurisprudencial · Crédito público e insolvencia personal</div>
+    <h1>El crédito público<br>en la Segunda Oportunidad</h1>
+    <p class="hero-sub">La batalla judicial más activa de 2024–2026: España, el TJUE y el Tribunal Supremo reescriben las reglas de la exoneración de deudas públicas.</p>
+    <div class="hero-meta">
+      <div class="hero-stat"><span class="hero-stat-n">6</span><span class="hero-stat-l">STS coordinadas · 18 feb 2026</span></div>
+      <div class="hero-stat"><span class="hero-stat-n">3</span><span class="hero-stat-l">STJUE clave · 2024</span></div>
+      <div class="hero-stat"><span class="hero-stat-n">10.000€</span><span class="hero-stat-l">Techo por acreedor público</span></div>
+    </div>
+  </div>
+
+  <span class="section-label">Los 7 debates activos en los tribunales</span>
+
+  <div class="grid-2">
+    <div class="cell">
+      <h3>🔴 Más candente</h3>
+      <h2>Crédito público: ¿exonerable o no?</h2>
+      <p>El TRLC 2022 contradijo la STS 389/2019 que permitía exonerar deudas con Hacienda y la SS. Desde las STS de febrero de 2026, el debate se ha reorientado: los créditos <em>subordinados</em> son ahora plenamente exonerables.</p>
+    </div>
+    <div class="cell">
+      <h3>🟡 Alta actividad</h3>
+      <h2>El concepto de "deudor de buena fe"</h2>
+      <p>Los tribunales analizan colaboración procesal, endeudamiento temerario y el papel del <em>crédito responsable</em>: si el banco no evaluó la solvencia, ¿puede bloquear la exoneración?</p>
+    </div>
+    <div class="cell">
+      <h3>🟡 Alta actividad</h3>
+      <h2>Causas de exclusión: ¿absolutas o relativas?</h2>
+      <p>SAP Zaragoza 1183/2026: Si concurre una causa del art. 487 TRLC (falta de colaboración, información falsa), la exclusión afecta a la totalidad del pasivo, no solo a ciertas deudas.</p>
+    </div>
+    <div class="cell">
+      <h3>🟡 Cuestión procesal</h3>
+      <h2>Aplicación temporal de la Ley 16/2022</h2>
+      <p>La solicitud de exoneración presentada tras el 26-09-2022 se rige por el régimen nuevo, aunque el concurso sea anterior. Esto genera conflictos en procedimientos en curso (SAP Tarragona 660 y 662/2026).</p>
+    </div>
+    <div class="cell">
+      <h3>🟢 Consolidado</h3>
+      <h2>Extensión a consumidores</h2>
+      <p>La segunda oportunidad aplica a personas físicas consumidoras, no solo a autónomos y empresarios. Algunos acreedores siguen cuestionando este ámbito subjetivo (SAP Zaragoza 1222/2026).</p>
+    </div>
+    <div class="cell">
+      <h3>🟢 Clarificado</h3>
+      <h2>Revisión de oficio del juez</h2>
+      <p>SAP Zaragoza 1133/2026: aunque no haya oposición de acreedores ni de la administración concursal, el juez debe verificar de oficio todos los presupuestos legales. No es un trámite automático.</p>
+    </div>
+  </div>
+
+  <div class="cell" style="border: 1px solid var(--rule); background:white;">
+    <h3>🔵 Conducta procesal</h3>
+    <h2>Mala fe procesal como causa de denegación</h2>
+    <p>SAP Navarra 812/2026: El deudor que se allana a una demanda mientras tramita su segunda oportunidad para generar gastos procesales puede incurrir en mala fe que afecte al derecho a la exoneración.</p>
+  </div>
+</div>
+
+<!-- ===================== JURISPRUDENCIA ===================== -->
+<div id="panel-jurisprudencia" class="panel">
+  <div class="hero">
+    <div class="hero-eyebrow">Sentencias clave</div>
+    <h1>Jurisprudencia<br>esencial</h1>
+    <p class="hero-sub">Pulsa cada resolución para desplegar el análisis. Ordenadas por instancia y relevancia.</p>
+  </div>
+
+  <span class="section-label">Tribunal de Justicia de la Unión Europea</span>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-tjue">TJUE</span>
+      <div class="judgment-title">C-687/22 — AEAT c. deudor español</div>
+      <div class="judgment-date">11 abr 2024</div>
+    </div>
+    <div class="judgment-body">
+      <p><strong>La más importante para España.</strong> El TJUE resolvió cuestión prejudicial planteada por juzgado español sobre si es compatible con la Directiva 2019/1023 que España excluya automáticamente el crédito tributario de la exoneración.</p>
+      <ul>
+        <li>Los Estados pueden excluir ciertas deudas, pero solo por motivos legítimos y respetando el <strong>principio de proporcionalidad</strong>.</li>
+        <li>Una exclusión automática y absoluta del crédito público, sin análisis individualizado, puede ser contraria a la Directiva.</li>
+        <li>El juez nacional debe verificar si la exclusión concreta está justificada en el caso del deudor concreto.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-tjue">TJUE</span>
+      <div class="judgment-title">C-289/23 — Corván</div>
+      <div class="judgment-date">7 nov 2024</div>
+    </div>
+    <div class="judgment-body">
+      <p><strong>Doctrina Corván.</strong> Profundiza en la línea del C-687/22: las exclusiones nacionales deben respetar el principio de proporcionalidad. Citada expresamente en la SAP Guadalajara 181/2026 y en todas las STS de febrero de 2026.</p>
+      <ul>
+        <li>El TJUE exige que el juez nacional aprecie si los motivos de exclusión «constituyen motivos legítimos de interés público».</li>
+        <li>La normativa nacional debe justificar la exclusión «en circunstancias bien definidas».</li>
+        <li>Implica un test de proporcionalidad caso a caso, no aplicación mecánica de la exclusión.</li>
+        <li>La lista del art. 23.4 de la Directiva <em>no es exhaustiva</em>: los Estados pueden añadir exclusiones si están justificadas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-tjue">TJUE</span>
+      <div class="judgment-title">C-20/23 — Instituto da Segurança Social (Portugal)</div>
+      <div class="judgment-date">8 may 2024</div>
+    </div>
+    <div class="judgment-body">
+      <p>Caso portugués con doctrina trasladable a España. La Directiva no permite mantener regímenes que hagan la exoneración ilusoria o excesivamente difícil para el deudor de buena fe.</p>
+      <ul>
+        <li>Las deudas con la Seguridad Social no pueden quedar excluidas de forma sistemática sin justificación proporcionada.</li>
+        <li>Refuerza la obligación de los Estados de garantizar una «segunda oportunidad real».</li>
+      </ul>
+    </div>
+  </div>
+
+  <span class="section-label" style="margin-top:2rem;">Tribunal Supremo · Bloque de 18 febrero 2026</span>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-ts">TS</span>
+      <div class="judgment-title">STS 436/2026 — Límite 10.000 € y créditos subordinados</div>
+      <div class="judgment-date">18 feb 2026</div>
+    </div>
+    <div class="judgment-body">
+      <p><strong>Sentencia clave del bloque.</strong> Compatibiliza el techo de 10.000 € del art. 489.1.5º TRLC con la Directiva apoyándose en <em>Corván</em>, pero introduce un límite crucial basado en la proporcionalidad.</p>
+      <ul>
+        <li>Los créditos públicos clasificados como <strong>subordinados en el concurso sí quedan afectados por la exoneración plena</strong>.</li>
+        <li>Solo respecto del resto (privilegiados y ordinarios) opera la limitación del art. 489.1.5º TRLC.</li>
+        <li>El preámbulo de la Ley 16/2022 ofrece justificación legítima de interés público para el techo cuantitativo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-ts">TS</span>
+      <div class="judgment-title">STS 437/2026 — Derivación TGSS: no basta la certificación</div>
+      <div class="judgment-date">18 feb 2026</div>
+    </div>
+    <div class="judgment-body">
+      <p>La derivación de responsabilidad de la Seguridad Social no bloquea automáticamente la exoneración. El juez debe verificar si responde a conducta deshonesta o de mala fe real.</p>
+      <ul>
+        <li>El proyecto original de la norma sí exigía dolo; el texto definitivo lo eliminó, pero el TS aplica el principio de proporcionalidad del TJUE.</li>
+        <li>No basta una mera certificación administrativa de la derivación: el acreedor debe acreditar la conducta.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-ts">TS</span>
+      <div class="judgment-title">STS 438/2026 — AEAT pierde: derivación ≠ exclusión total</div>
+      <div class="judgment-date">18 feb 2026</div>
+    </div>
+    <div class="judgment-body">
+      <p>La AEAT recurría en casación sosteniendo que la derivación de responsabilidad tributaria debía implicar denegación total (sin aplicar siquiera el límite de 10.000 €). El TS desestima.</p>
+      <ul>
+        <li>El art. 487.1.2º TRLC (derivación) y el art. 489.1.5º TRLC (límite cuantitativo) tienen ámbitos distintos y no se excluyen entre sí.</li>
+        <li>Si no hay infracción muy grave acreditada, procede la exoneración parcial con límite, no la denegación total.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-ts">TS</span>
+      <div class="judgment-title">STS 439/2026 — Haciendas Forales y Locales</div>
+      <div class="judgment-date">18 feb 2026</div>
+    </div>
+    <div class="judgment-body">
+      <p>El límite de 10.000 € opera por cada acreedor público individualmente, no de forma global para todos los acreedores públicos conjuntamente. Caso Vitoria-Gasteiz: TGSS y Diputación Foral de Álava.</p>
+      <ul>
+        <li>La cuestión de si Haciendas Locales y Forales (cuya recaudación no gestiona la AEAT) quedan dentro del límite sigue abierta.</li>
+      </ul>
+    </div>
+  </div>
+
+  <span class="section-label" style="margin-top:2rem;">Audiencias Provinciales y Tribunales de Instancia · 2026</span>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-inst">TIC · Guadalajara</span>
+      <div class="judgment-title">STIC 325/2026 — Cálculo paso a paso (caso real)</div>
+      <div class="judgment-date">22 abr 2026</div>
+    </div>
+    <div class="judgment-body">
+      <p>Primera aplicación detallada del método de cálculo post-STS 436/2026. AEAT (9.327 €) y TGSS (8.885 €) pierden la oposición. El deudor queda liberado de más de 13.000 € de los 18.000 € de deuda pública.</p>
+      <ul>
+        <li>Paso 1: Separar crédito subordinado → exonerado 100%.</li>
+        <li>Paso 2: Sobre el resto, primeros 5.000 € íntegros + 50% del exceso = límite aplicable por acreedor.</li>
+        <li>Los fallos ya listan uno a uno los créditos exonerados con importe exacto.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-inst">TIC · Salamanca</span>
+      <div class="judgment-title">Sentencias 43 y 44/2026 — AEAT pierde con derivación grave</div>
+      <div class="judgment-date">6 abr 2026</div>
+    </div>
+    <div class="judgment-body">
+      <p>La AEAT tenía acuerdo firme de derivación de responsabilidad, pero la Administración misma había calificado la conducta como infracción <em>grave</em> (no muy grave). El juzgado desestima la oposición.</p>
+      <ul>
+        <li>Para bloquear la exoneración, el acreedor público debe acreditar que la derivación trae causa de conducta fraudulenta equiparable a infracción muy grave.</li>
+        <li>TGSS: ni siquiera aportó la resolución de derivación, solo un certificado de deuda. Insuficiente.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-ap">AP · Girona</span>
+      <div class="judgment-title">Auto 281/2026 — El límite 10.000 € se extiende a organismos locales</div>
+      <div class="judgment-date">18 mar 2026</div>
+    </div>
+    <div class="judgment-body">
+      <p>El techo del art. 489.1.5º TRLC se aplica al organismo recaudador local XALOC (Diputación de Girona). Distinguir según quién recaude carece de justificación proporcional conforme a la Directiva.</p>
+    </div>
+  </div>
+
+  <div class="judgment" onclick="toggleJudgment(this)">
+    <div class="judgment-head">
+      <span class="judgment-badge badge-ap">AP · Tarragona</span>
+      <div class="judgment-title">SAP 660 y 662/2026 — El giro regresivo del TRLC 2022</div>
+      <div class="judgment-date">Abr 2026</div>
+    </div>
+    <div class="judgment-body">
+      <p>El Gobierno aprovechó la refundición de 2022 para codificar la no-exoneración del crédito público, contradiciendo la STS 389/2019. La paradoja: la reforma que debía mejorar la segunda oportunidad la empeoró en este punto.</p>
+      <ul>
+        <li>Las solicitudes presentadas tras el 26-09-2022 se rigen por el nuevo régimen, aunque el concurso sea anterior.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== DOCTRINA TS 2026 ===================== -->
+<div id="panel-doctrina" class="panel">
+  <div class="hero">
+    <div class="hero-eyebrow">STS 436–439/2026 · 18 de febrero de 2026</div>
+    <h1>Doctrina fijada<br>por el Tribunal Supremo</h1>
+    <p class="hero-sub">Seis sentencias coordinadas. Jurisprudencia vinculante aplicada en cascada por todas las Audiencias desde marzo de 2026.</p>
+  </div>
+
+  <span class="section-label">Tabla de doctrina</span>
+
+  <table class="doctrine-table">
+    <thead>
+      <tr>
+        <th>Cuestión</th>
+        <th>Doctrina fijada por el TS</th>
+        <th>Sentencia</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>¿El límite de 10.000 € es compatible con la Directiva?</td>
+        <td>Sí, si está debidamente justificado por interés público legítimo (preámbulo Ley 16/2022)</td>
+        <td><span class="judgment-badge badge-ts" style="display:inline-block">STS 436</span></td>
+        <td><span class="pill pill-green"><span class="dot"></span>Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>¿Se exoneran los créditos públicos <strong>subordinados</strong>?</td>
+        <td>Sí, plenamente — <em>novedad clave</em> de las STS de febrero</td>
+        <td><span class="judgment-badge badge-ts" style="display:inline-block">STS 436</span></td>
+        <td><span class="pill pill-green"><span class="dot"></span>Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>¿La derivación de responsabilidad excluye siempre la exoneración?</td>
+        <td>No automáticamente: exige análisis de proporcionalidad y acreditación de fraude</td>
+        <td><span class="judgment-badge badge-ts" style="display:inline-block">STS 437-438</span></td>
+        <td><span class="pill pill-green"><span class="dot"></span>Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>¿El límite de 10.000 € opera por acreedor o globalmente?</td>
+        <td>Por cada acreedor público individualmente</td>
+        <td><span class="judgment-badge badge-ts" style="display:inline-block">STS 439</span></td>
+        <td><span class="pill pill-green"><span class="dot"></span>Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>¿Las Haciendas Locales y Forales quedan dentro del límite?</td>
+        <td>Sí (AP Girona, AP Córdoba lo confirman). Cuestión abierta según el crédito concreto</td>
+        <td><span class="judgment-badge badge-ap" style="display:inline-block">AP Girona</span></td>
+        <td><span class="pill pill-yellow"><span class="dot"></span>En consolidación</span></td>
+      </tr>
+      <tr>
+        <td>Forma del fallo de exoneración</td>
+        <td>Debe listar uno a uno los créditos exonerados con importe exacto</td>
+        <td><span class="judgment-badge badge-inst" style="display:inline-block">TIC Guadalajara</span></td>
+        <td><span class="pill pill-green"><span class="dot"></span>Aplicado</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="section-label">Impacto en la posición de AEAT y TGSS</span>
+  <table class="doctrine-table">
+    <thead>
+      <tr>
+        <th>Situación</th>
+        <th>Antes de las STS feb. 2026</th>
+        <th>Después de las STS feb. 2026</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Crédito subordinado AEAT / TGSS</td>
+        <td><span class="pill pill-red"><span class="dot"></span>No exonerable</span></td>
+        <td><span class="pill pill-green"><span class="dot"></span>Exonerable al 100%</span></td>
+      </tr>
+      <tr>
+        <td>Ámbito del límite de 10.000 €</td>
+        <td>Solo AEAT y TGSS</td>
+        <td>Todo crédito público (incl. local y foral)</td>
+      </tr>
+      <tr>
+        <td>Derivación de responsabilidad</td>
+        <td><span class="pill pill-red"><span class="dot"></span>Bloqueaba siempre</span></td>
+        <td><span class="pill pill-yellow"><span class="dot"></span>Solo si hay fraude acreditado</span></td>
+      </tr>
+      <tr>
+        <td>Postura de AEAT / TGSS en juicio</td>
+        <td>Ganaban con certificado de deuda</td>
+        <td>Pierden si no acreditan conducta fraudulenta</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===================== CALCULADORA ===================== -->
+<div id="panel-calculadora" class="panel">
+  <div class="hero">
+    <div class="hero-eyebrow">Herramienta práctica · Art. 489.1.5º TRLC</div>
+    <h1>Calculadora de<br>exoneración</h1>
+    <p class="hero-sub">Fórmula aplicada por el Juzgado nº 4 de Guadalajara (STIC 325/2026), reproduciendo la doctrina de la STS 436/2026.</p>
+  </div>
+
+  <div class="calc-card">
+    <h2>Introduce los datos de cada acreedor</h2>
+    <p style="font-size:0.85rem; color:var(--gray); margin-top:0.5rem;">Introduce los importes brutos de cada acreedor público. La calculadora separará automáticamente el tramo subordinado (exonerado 100%) y aplicará el límite sobre el resto.</p>
+
+    <div class="calc-inputs">
+      <div class="calc-field">
+        <label>Deuda AEAT total (€)</label>
+        <input type="number" id="aeat-total" placeholder="9327" value="">
+      </div>
+      <div class="calc-field">
+        <label>Deuda AEAT subordinada (€)</label>
+        <input type="number" id="aeat-sub" placeholder="40" value="">
+      </div>
+      <div class="calc-field">
+        <label>Deuda TGSS total (€)</label>
+        <input type="number" id="tgss-total" placeholder="8885" value="">
+      </div>
+      <div class="calc-field">
+        <label>Deuda TGSS subordinada (€)</label>
+        <input type="number" id="tgss-sub" placeholder="1179" value="">
+      </div>
+      <div class="calc-field">
+        <label>Deuda Hacienda Local / Foral total (€)</label>
+        <input type="number" id="local-total" placeholder="0" value="">
+      </div>
+      <div class="calc-field">
+        <label>Deuda Hacienda Local / Foral subordinada (€)</label>
+        <input type="number" id="local-sub" placeholder="0" value="">
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calcular()">Calcular exoneración</button>
+
+    <div class="calc-result" id="calc-result">
+      <div style="margin-bottom:1rem;">
+        <h3>Resultado del cálculo</h3>
+      </div>
+      <div id="result-aeat"></div>
+      <div id="result-tgss"></div>
+      <div id="result-local"></div>
+      <div class="result-row result-total" id="result-total"></div>
+    </div>
+
+    <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--rule);">
+      <h3>Fórmula aplicada</h3>
+      <p style="font-size:0.83rem; margin-top:0.5rem; color:var(--gray);">
+        1. Crédito subordinado → <strong>exonerado 100%</strong><br>
+        2. Crédito no subordinado (privilegiado + ordinario) → primeros <strong>5.000 €</strong> íntegros + <strong>50% del exceso</strong> hasta un máximo de 10.000 € exonerados por acreedor<br>
+        3. El cálculo se aplica de forma independiente para cada acreedor público
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CONFLICTO ES vs UE ===================== -->
+<div id="panel-conflicto" class="panel">
+  <div class="hero">
+    <div class="hero-eyebrow">España vs. Europa · Directiva 2019/1023</div>
+    <h1>El conflicto<br>abierto</h1>
+    <p class="hero-sub">El legislador español endureció la protección del crédito público al transponer la Directiva de 2019, en lugar de liberalizarla. Este es el mapa del desacuerdo.</p>
+  </div>
+
+  <span class="section-label">Posición España (TRLC 2022) vs. Posición TJUE</span>
+
+  <div class="conflict-section">
+    <div class="conflict-item" style="font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--gray); border-bottom:2px solid var(--ink); padding-bottom:0.5rem;">
+      <div class="conflict-q">Cuestión</div>
+      <div class="conflict-bars">
+        <div class="c-bar c-es">🇪🇸 España</div>
+        <div class="c-bar c-eu">🇪🇺 TJUE</div>
+      </div>
+    </div>
+
+    <div class="conflict-item">
+      <div class="conflict-q">Exclusión automática del crédito público</div>
+      <div class="conflict-bars">
+        <div class="c-bar c-es" style="font-size:0.68rem;">Sí, salvo excepciones</div>
+        <div class="c-bar c-eu" style="font-size:0.68rem;">No: proporcionalidad caso a caso</div>
+      </div>
+    </div>
+    <div class="conflict-item">
+      <div class="conflict-q">Infracciones tributarias muy graves</div>
+      <div class="conflict-bars">
+        <div class="c-bar c-es" style="font-size:0.68rem;">Excluyen siempre</div>
+        <div class="c-bar c-eu" style="font-size:0.68rem;">Compatible si proporcionado</div>
+      </div>
+    </div>
+    <div class="conflict-item">
+      <div class="conflict-q">Infracciones tributarias graves</div>
+      <div class="conflict-bars">
+        <div class="c-bar c-es" style="font-size:0.68rem;">Excluyen si >50% cuota</div>
+        <div class="c-bar c-eu" style="font-size:0.68rem;">Por determinar</div>
+      </div>
+    </div>
+    <div class="conflict-item">
+      <div class="conflict-q">Deudas Seguridad Social ordinarias</div>
+      <div class="conflict-bars">
+        <div class="c-bar c-es" style="font-size:0.68rem;">No exonerables</div>
+        <div class="c-bar c-eu" style="font-size:0.68rem;">Posiblemente contrario (C-20/23)</div>
+      </div>
+    </div>
+    <div class="conflict-item">
+      <div class="conflict-q">Deudas AEAT ordinarias</div>
+      <div class="conflict-bars">
+        <div class="c-bar c-es" style="font-size:0.68rem;">No exonerables</div>
+        <div class="c-bar c-eu" style="font-size:0.68rem;">En cuestión tras C-687/22</div>
+      </div>
+    </div>
+    <div class="conflict-item">
+      <div class="conflict-q">Crédito público subordinado</div>
+      <div class="conflict-bars">
+        <div class="c-bar c-es" style="font-size:0.68rem;">Exonerable (STS 436/2026)</div>
+        <div class="c-bar c-eu" style="font-size:0.68rem;">Compatible</div>
+      </div>
+    </div>
+    <div class="conflict-item">
+      <div class="conflict-q">Techo cuantitativo (10.000 €)</div>
+      <div class="conflict-bars">
+        <div class="c-bar c-es" style="font-size:0.68rem;">Art. 489.1.5º TRLC</div>
+        <div class="c-bar c-eu" style="font-size:0.68rem;">Compatible si justificado</div>
+      </div>
+    </div>
+  </div>
+
+  <span class="section-label" style="margin-top:2rem;">El giro regresivo del TRLC 2022</span>
+  <div class="cell" style="border:1px solid var(--rule); background:white; margin-bottom:1.5rem;">
+    <p>La STS 389/2019 había abierto la puerta a que parte del crédito público sí pudiera exonerarse. Sin embargo, el Gobierno aprovechó la refundición normativa de 2022 para codificar la <strong>no-exoneración del crédito público</strong>, contradiciendo al Tribunal Supremo y endureciendo el régimen.</p>
+    <p style="margin-top:0.75rem; padding: 0.75rem; background: var(--accent-pale); border-left: 3px solid var(--accent);">La paradoja: la reforma que debía mejorar la segunda oportunidad —impuesta por la Directiva europea— la empeoró en este punto concreto, en directa contradicción con los objetivos de la propia Directiva.</p>
+  </div>
+</div>
+
+<!-- ===================== CONSTITUCIONAL ===================== -->
+<div id="panel-constitucional" class="panel">
+  <div class="hero">
+    <div class="hero-eyebrow">Análisis de viabilidad · Tribunal Constitucional</div>
+    <h1>¿Existe vía<br>constitucional?</h1>
+    <p class="hero-sub">La búsqueda exhaustiva en el TC arroja un resultado contundente: <strong>ninguna STC</strong> ha resuelto sobre la constitucionalidad del art. 489.1.5º TRLC. El terreno está virgen.</p>
+  </div>
+
+  <span class="section-label">Mapa de vías constitucionales</span>
+
+  <div class="const-grid">
+    <div class="const-card">
+      <div class="const-art">Art. 14</div>
+      <div class="const-name">Igualdad ante la ley</div>
+      <div class="const-desc">Trato diferente a deuda pública vs. privada y al deudor sin deuda tributaria.</div>
+      <span class="pill pill-yellow"><span class="dot"></span>Viabilidad baja-media</span>
+      <div class="const-via" style="margin-top:0.75rem; color:var(--gray); font-size:0.75rem;">⚠️ El TC admite diferenciaciones justificadas por la naturaleza del crédito público.</div>
+    </div>
+    <div class="const-card">
+      <div class="const-art">Art. 24</div>
+      <div class="const-name">Tutela judicial efectiva</div>
+      <div class="const-desc">El procedimiento concursal sería inútil si no produce exoneración real para el deudor.</div>
+      <span class="pill pill-yellow"><span class="dot"></span>Viabilidad baja</span>
+      <div class="const-via" style="margin-top:0.75rem; color:var(--gray); font-size:0.75rem;">⚠️ La lesión viene de la ley, no del juez. El amparo requiere lesión imputable a resolución judicial.</div>
+    </div>
+    <div class="const-card">
+      <div class="const-art">Art. 10</div>
+      <div class="const-name">Dignidad de la persona</div>
+      <div class="const-desc">Insolvencia perpetua e irreversible como atentado contra el libre desarrollo de la personalidad.</div>
+      <span class="pill pill-red"><span class="dot"></span>Viabilidad muy baja</span>
+      <div class="const-via" style="margin-top:0.75rem; color:var(--gray); font-size:0.75rem;">❌ Sin doctrina constitucional sólida que vincule art. 10 CE con derechos patrimoniales.</div>
+    </div>
+    <div class="const-card">
+      <div class="const-art">Art. 31</div>
+      <div class="const-name">Capacidad económica</div>
+      <div class="const-desc">Mantener deuda tributaria pese a carecer de capacidad económica.</div>
+      <span class="pill pill-red"><span class="dot"></span>Viabilidad nula</span>
+      <div class="const-via" style="margin-top:0.75rem; color:var(--gray); font-size:0.75rem;">❌ Art. 31 CE es Capítulo III (principio rector), no amparable directamente.</div>
+    </div>
+    <div class="const-card" style="border-color: var(--green); border-width:2px;">
+      <div class="const-art" style="color:var(--green)">Art. 163</div>
+      <div class="const-name">Cuestión de inconstitucionalidad</div>
+      <div class="const-desc">Un juzgado mercantil plantea la inconstitucionalidad del art. 489.1.5º TRLC por vulnerar arts. 14 y 31 CE.</div>
+      <span class="pill pill-green"><span class="dot"></span>Vía más sólida</span>
+      <div class="const-via" style="margin-top:0.75rem; color:var(--green); font-size:0.75rem;">✅ Los juzgados ya plantean cuestiones prejudiciales al TJUE. El salto al TC es plausible.</div>
+    </div>
+  </div>
+
+  <div style="background: var(--green-pale); border-left: 3px solid var(--green); padding: 1.25rem; margin-bottom:1.5rem;">
+    <h3 style="color: var(--green); margin-bottom:0.5rem;">Conclusión estratégica</h3>
+    <p style="font-size:0.88rem;">El recurso de amparo directo tiene escasas posibilidades sobre esta cuestión. La vía constitucionalmente más robusta es que un juzgado mercantil plantee una <strong>cuestión de inconstitucionalidad</strong>, que ya tiene a su disposición el test de proporcionalidad del TJUE (<em>Corván</em>) como argumento de respaldo. Lo que hoy es un debate en los juzgados mercantiles podría llegar al TC en los próximos años por esta vía.</p>
+  </div>
+</div>
+
+<!-- ===================== CRONOLOGÍA ===================== -->
+<div id="panel-cronologia" class="panel">
+  <div class="hero">
+    <div class="hero-eyebrow">Historia legislativa y judicial</div>
+    <h1>Cronología<br>del conflicto</h1>
+    <p class="hero-sub">De la primera Ley de Segunda Oportunidad al bloque de sentencias del TS de febrero de 2026.</p>
+  </div>
+
+  <span class="section-label">Hitos clave</span>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">2015</div>
+      <div class="tl-title">Primera Ley de Segunda Oportunidad (Ley 25/2015)</div>
+      <div class="tl-body">España introduce el mecanismo de exoneración del pasivo insatisfecho. El crédito público queda en gran medida excluido, pero la norma es imprecisa.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2 jul 2019</div>
+      <div class="tl-title">STS 389/2019 — El TS abre la puerta al crédito público</div>
+      <div class="tl-body">El Tribunal Supremo interpreta la ley anterior de forma favorable al deudor y permite exonerar parte del crédito público. La doctrina más aperturista del período.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">26 sep 2022</div>
+      <div class="tl-title">Ley 16/2022 y TRLC — El Gobierno codifica la no-exoneración</div>
+      <div class="tl-body">La reforma —que transpone la Directiva 2019/1023— endurece el régimen: blindaje del crédito público, art. 489.1.5º TRLC (límite 10.000 €). Contradice la STS 389/2019.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">11 abr 2024</div>
+      <div class="tl-title">STJUE C-687/22 — La AEAT y la proporcionalidad</div>
+      <div class="tl-body">El TJUE impone el test de proporcionalidad caso a caso. La exclusión automática del crédito tributario puede ser contraria a la Directiva.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">8 may 2024</div>
+      <div class="tl-title">STJUE C-20/23 — Instituto da Segurança Social (Portugal)</div>
+      <div class="tl-body">Doctrina trasladable a España: la exclusión sistemática de deudas con la SS sin justificación proporcionada puede ser contraria a la Directiva.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">7 nov 2024</div>
+      <div class="tl-title">STJUE C-289/23 — Corván</div>
+      <div class="tl-body">Refuerza el test de proporcionalidad. La lista del art. 23.4 de la Directiva no es exhaustiva, pero las exclusiones adicionales deben estar bien justificadas. Se convierte en referencia de todas las resoluciones posteriores.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">18 feb 2026</div>
+      <div class="tl-title">STS 436–439/2026 — El TS fija doctrina vinculante</div>
+      <div class="tl-body">Bloque de 6 sentencias coordinadas. Novedades clave: créditos subordinados exonerables al 100%, límite de 10.000 € por acreedor (no global), derivación de responsabilidad no bloquea sin fraude acreditado.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Mar–May 2026</div>
+      <div class="tl-title">Recepción inmediata en primera instancia y Audiencias</div>
+      <div class="tl-body">TIC Guadalajara, TIC Salamanca, AP Girona, AP Córdoba, AP Zaragoza, AP Tarragona y AP Navarra aplican la nueva doctrina en cascada. La AEAT y la TGSS pierden la mayoría de las oposiciones.</div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<script>
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  const tabs = document.querySelectorAll('.nav-tab');
+  const map = ['resumen','jurisprudencia','doctrina','calculadora','conflicto','constitucional','cronologia'];
+  tabs[map.indexOf(id)].classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleJudgment(el) {
+  const body = el.querySelector('.judgment-body');
+  body.classList.toggle('open');
+}
+
+function calcAcreedor(total, sub, nombre) {
+  if (!total || total <= 0) return null;
+  sub = sub || 0;
+  const resto = Math.max(0, total - sub);
+  // Fórmula: primeros 5000 íntegros + 50% del exceso
+  let exoneradoResto = 0;
+  if (resto <= 5000) {
+    exoneradoResto = resto;
+  } else {
+    exoneradoResto = 5000 + (resto - 5000) * 0.5;
+  }
+  const totalExonerado = sub + exoneradoResto;
+  const noExonerable = total - totalExonerado;
+  return { nombre, total, sub, resto, exoneradoResto, totalExonerado, noExonerable };
+}
+
+function fmtEur(n) {
+  return n.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+}
+
+function renderAcreedor(r) {
+  if (!r) return '';
+  return `
+    <div style="margin-bottom:1rem;">
+      <div style="font-size:0.78rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--gray); margin-bottom:0.5rem;">${r.nombre}</div>
+      <div class="result-row">
+        <span class="result-label">Crédito subordinado (exonerado 100%)</span>
+        <span class="result-value exonerated">+ ${fmtEur(r.sub)}</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Crédito no subordinado: ${fmtEur(r.resto)}</span>
+        <span class="result-value exonerated">+ ${fmtEur(r.exoneradoResto)}</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label"><strong>Total exonerado ${r.nombre}</strong></span>
+        <span class="result-value exonerated"><strong>${fmtEur(r.totalExonerado)}</strong></span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Pendiente de pago ${r.nombre}</span>
+        <span class="result-value remaining">${fmtEur(r.noExonerable)}</span>
+      </div>
+    </div>
+  `;
+}
+
+function calcular() {
+  const aeatT = parseFloat(document.getElementById('aeat-total').value) || 0;
+  const aeatS = parseFloat(document.getElementById('aeat-sub').value) || 0;
+  const tgssT = parseFloat(document.getElementById('tgss-total').value) || 0;
+  const tgssS = parseFloat(document.getElementById('tgss-sub').value) || 0;
+  const localT = parseFloat(document.getElementById('local-total').value) || 0;
+  const localS = parseFloat(document.getElementById('local-sub').value) || 0;
+
+  const rAeat = calcAcreedor(aeatT, aeatS, 'AEAT');
+  const rTgss = calcAcreedor(tgssT, tgssS, 'TGSS');
+  const rLocal = calcAcreedor(localT, localS, 'Hacienda Local / Foral');
+
+  document.getElementById('result-aeat').innerHTML = rAeat ? renderAcreedor(rAeat) : '';
+  document.getElementById('result-tgss').innerHTML = rTgss ? renderAcreedor(rTgss) : '';
+  document.getElementById('result-local').innerHTML = rLocal ? renderAcreedor(rLocal) : '';
+
+  const totExon = (rAeat?.totalExonerado || 0) + (rTgss?.totalExonerado || 0) + (rLocal?.totalExonerado || 0);
+  const totPend = (rAeat?.noExonerable || 0) + (rTgss?.noExonerable || 0) + (rLocal?.noExonerable || 0);
+  const totDeuda = aeatT + tgssT + localT;
+
+  document.getElementById('result-total').innerHTML = `
+    <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+      <span>TOTAL DEUDA PÚBLICA</span>
+      <span class="result-value">${fmtEur(totDeuda)}</span>
+    </div>
+    <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+      <span style="color:var(--green);">Total exonerado</span>
+      <span class="result-value exonerated">${fmtEur(totExon)} (${totDeuda > 0 ? Math.round(totExon/totDeuda*100) : 0}%)</span>
+    </div>
+    <div style="display:flex; justify-content:space-between;">
+      <span style="color:var(--accent);">Total pendiente de pago</span>
+      <span class="result-value remaining">${fmtEur(totPend)}</span>
+    </div>
+  `;
+
+  document.getElementById('calc-result').classList.add('show');
+}
+</script>
+</body>
+</html>
